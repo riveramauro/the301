@@ -29,4 +29,3 @@ jobs:
         ftp-username: hobokeo4
         ftp-password: ${{ secrets.FTP_PASSWORD }}
         local-dir: dist
-        git-ftp-args: --dry-run  
