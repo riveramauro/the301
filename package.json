@@ -1,0 +1,17 @@
+{
+    "name": "hoboken-heights",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "parcel index.pug --no-cache --public-url /dist --open",
+        "build": "rm -rf dist && parcel build index.pug --no-minify --no-cache"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "pug": "^2.0.4"
+    }
+}
