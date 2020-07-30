@@ -29,4 +29,4 @@ jobs:
         ftp-username: hobokeo4
         ftp-password: ${{ secrets.FTP_PASSWORD }}
         local-dir: dist
-        known-host: hoboken-heights.com:22 ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA5GWBecev8dGbd0wdrsutHsoomTsnqxymCQttQzjJECAnOVhdHjVtMhkJJsbJgAPRdQlKfhFIEFA95FvRjiKCSM0CKnubrTLp07krj6zSf1bLgwAN1ed48zRbCyFJxLHVi/wq1MnbQ9ZhKp8MxIrtrdKamAMCdJSBehMfo1WBjMfKWAiyhZ2yvOIn8oJNP2eI3qxAT5uN+T2sZp0mtKf+g+pQ2zYUYtJjwOMlgq4W6j3s/6nC2EX5Oca5YiwCdd30KdisG99TgfoJyCEgtMN4JqBb20824bBWis/D1tqly4FTYB8jlCjg91JavA4mmTfDauwC0OzBdcPDdy9NaSBHwQ==
+        known-hosts: hoboken-heights.com:22 ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA5GWBecev8dGbd0wdrsutHsoomTsnqxymCQttQzjJECAnOVhdHjVtMhkJJsbJgAPRdQlKfhFIEFA95FvRjiKCSM0CKnubrTLp07krj6zSf1bLgwAN1ed48zRbCyFJxLHVi/wq1MnbQ9ZhKp8MxIrtrdKamAMCdJSBehMfo1WBjMfKWAiyhZ2yvOIn8oJNP2eI3qxAT5uN+T2sZp0mtKf+g+pQ2zYUYtJjwOMlgq4W6j3s/6nC2EX5Oca5YiwCdd30KdisG99TgfoJyCEgtMN4JqBb20824bBWis/D1tqly4FTYB8jlCjg91JavA4mmTfDauwC0OzBdcPDdy9NaSBHwQ==
