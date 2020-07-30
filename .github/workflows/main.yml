@@ -25,7 +25,7 @@ jobs:
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
-        ftp-server: ftp://ftp.hoboken-heights.com/public_html/testftp/
+        ftp-server: sftp://ftp.hoboken-heights.com:22/public_html/testftp/
         ftp-username: hobokeo4
         ftp-password: ${{ secrets.FTP_PASSWORD }}
         local-dir: dist
