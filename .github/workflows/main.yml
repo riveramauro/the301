@@ -8,10 +8,26 @@ jobs:
     - uses: actions/checkout@v2.1.0
       with:
         fetch-depth: 2
+
+    - name: Use Node.js 12.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+        
+    - name: Build Project
+      run: |
+        npm install
+        npm run build --if-present
+        
+    - name: List output files
+      run: ls
+        
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
-        ftp-server: sftp://ftp.hoboken-heights.com/public_html/testftp
+        ftp-server: sftp://ftp.hoboken-heights.com:2222/public_html/testftp/
         ftp-username: hobokeo4
         ftp-password: ${{ secrets.FTP_PASSWORD }}
-        git-ftp-args: --dry-run  
+        local-dir: dist
+        git-ftp-args: --insecure
+        # known-hosts: "hoboken-heights.com ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA5GWBecev8dGbd0wdrsutHsoomTsnqxymCQttQzjJECAnOVhdHjVtMhkJJsbJgAPRdQlKfhFIEFA95FvRjiKCSM0CKnubrTLp07krj6zSf1bLgwAN1ed48zRbCyFJxLHVi/wq1MnbQ9ZhKp8MxIrtrdKamAMCdJSBehMfo1WBjMfKWAiyhZ2yvOIn8oJNP2eI3qxAT5uN+T2sZp0mtKf+g+pQ2zYUYtJjwOMlgq4W6j3s/6nC2EX5Oca5YiwCdd30KdisG99TgfoJyCEgtMN4JqBb20824bBWis/D1tqly4FTYB8jlCjg91JavA4mmTfDauwC0OzBdcPDdy9NaSBHwQ=="
