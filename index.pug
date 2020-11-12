@@ -1,44 +1,26 @@
-<!DOCTYPE html>
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title The 301 - Coming Soon
-        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css")
-        script(defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js")
-        link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet")
-        link(rel="stylesheet", href="style.css")
-        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css")
-        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css")
-    body
-      section#header: .container
-        img.logo.animated.fadeIn.slower(src="./images/the301-logo.svg", alt="The 301")
-      #main.is-flex: .container.has-text-centered
-        h1.title.is-uppercase.animated.fadeIn.slower.
-          Coming Soon
-      section.section#mainContainer
-        .container.has-text-centered
-          .columns
-            .column.background_container
-              .background_column
-            .column
-              p For information please fill the form below
-              <!--[if lte IE 8]>
-              script(charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js")
-              <![endif]-->
-              script(charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js")
-              script.
-                hbspt.forms.create({
-                portalId: "5163160",
-                formId: "a6af480b-0890-4c7c-ba2f-de6d70bb15cf"
-                });
-                setTimeout(function(){
-                  document.querySelector('.hs-button').className += ' button';
-                  document.querySelector('.hs-button').className += ' is-link';
-                }, 1000);
-      #footer
-        p The purpose of this advertisement is to solicit non-binding reservations. The non-binding reservation is not a contract and may be cancelled by the prospective purchaser at any time, without cause. Any money paid to the developer shall be refunded to the prospective purchaser upon request and cancellation of the non-binding reservation. – Copyright All Rights Reserved
-            
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js")
-    script(src="./index.js")
+extends layout.pug
+block title
+  title The 301 - Coming Soon
+block content
+  #main
+    .heroSlider
+      img(src="./images/the301_background.webp" style="width:100%;" alt="The 301")
+    .buttonHide
+    .intro_title
+      h2.title.has-text-white COMING SOON
+  section.section#formFooter
+    .container
+      h3.title.is-3.animated.fadeIn.slower.has-text-centered
+        | For information please fill <br>the form below Email
+      <!--[if lte IE 8]>
+      script(charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js")
+      <![endif]-->
+      script(charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js")
+      script.
+        hbspt.forms.create({
+        portalId: "5163160",
+        formId: "a6af480b-0890-4c7c-ba2f-de6d70bb15cf"
+        });
+block scripts
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js")
+  //- script(src="./homepage.js")

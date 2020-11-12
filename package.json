@@ -1,18 +1,24 @@
 {
-    "name": "hoboken-heights",
+    "name": "the-301",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "parcel index.pug --no-cache --public-url /dist --open",
-        "build": "rm -rf dist && parcel build index.pug --no-minify --no-cache"
+        "start": "parcel *.pug --no-cache --open",
+        "build": "rm -rf dist && parcel build index.pug --no-cache --public-url ./"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "parcel": "^2.0.0-beta.1",
-        "pug": "^2.0.4"
+        "bulma": "^0.9.1",
+        "express": "^4.17.1",
+        "parcel-bundler": "^1.12.4",
+        "pug": "^3.0.0",
+        "sass": "^1.27.0"
+    },
+    "dependencies": {
+        "simplelightbox": "^2.2.2"
     }
 }
